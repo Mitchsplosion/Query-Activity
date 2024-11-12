@@ -53,3 +53,9 @@ let team7 = {
   scorers: ["Aragones", "Griezmann", "Torez"],
   fans: 400,
 };
+
+let teams = [team1, team2, team3, team4, team5, team6, team7];
+
+teams.forEach((team) => {
+  db.collection("teams").add(team);
+});
