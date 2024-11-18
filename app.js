@@ -60,6 +60,6 @@ let teams = [team1, team2, team3, team4, team5, team6, team7];
 //   db.collection("teams").add(team);
 // });
 
-document.querySelector("#main").innerHTML += "<p> test </p>";
+// document.querySelector("#main").innerHTML += "<p> test </p>";
 
-console.log(firebase);
+// console.log(firebase);
