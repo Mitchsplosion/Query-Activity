@@ -59,3 +59,5 @@ let teams = [team1, team2, team3, team4, team5, team6, team7];
 teams.forEach((team) => {
   db.collection("teams").add(team);
 });
+
+document.querySelector("#main").innerhtml += "p";
