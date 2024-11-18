@@ -63,3 +63,60 @@ let teams = [team1, team2, team3, team4, team5, team6, team7];
 // document.querySelector("#main").innerHTML += "<p> test </p>";
 
 // console.log(firebase);
+
+//all teams in spain
+db.collection("teams")
+  .where("country", "==", "Spain")
+  .get()
+  .then((data) => {
+    let mydocs = data.docs;
+    if (mydocs.length == 0) {
+      console.log("No teams found");
+      return;
+    }
+    console.log(`${mydocs.length} teams found`);
+    mydocs.forEach((d) => {
+      console.log(d.data());
+    });
+  });
+
+//all teams in Madrid, Spain
+db.collection("teams")
+  .where("country", "==", "Spain")
+  .where("city", "==", "madrid")
+  .get()
+  .then((data) => {
+    let mydocs = data.docs;
+    if (mydocs.length == 0) {
+      console.log("No teams found");
+      return;
+    }
+    console.log(`${mydocs.length} teams found`);
+    mydocs.forEach((d) => {
+      console.log(d.data());
+    });
+  });
+
+//all national teams
+
+//all teams that aren't in spain
+db.collection("teams")
+  .where("country", "!=", "Spain")
+  .get()
+  .then((data) => {
+    let mydocs = data.docs;
+    if (mydocs.length == 0) {
+      console.log("No teams found");
+      return;
+    }
+    console.log(`${mydocs.length} teams found`);
+    mydocs.forEach((d) => {
+      console.log(d.data());
+    });
+  });
+
+//all teams that aren't in spain or england
+
+//all teams in spain with more than 700m fans
+
+//all teams with number of fans in range of 500m and 600m
