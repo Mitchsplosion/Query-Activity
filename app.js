@@ -60,4 +60,6 @@ teams.forEach((team) => {
   db.collection("teams").add(team);
 });
 
-document.querySelector("#main").innerhtml += "p";
+document.querySelector("#main").innerHTML += "<p> test </p>";
+
+console.log(firebase);

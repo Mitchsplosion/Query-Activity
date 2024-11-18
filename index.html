@@ -5,7 +5,38 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="main"></p>
+    <div id="main"></div>
   </body>
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAkwngNdlUItn28Mpaffv40an4FL3UxcHE",
+      authDomain: "query-cb6dd.firebaseapp.com",
+      projectId: "query-cb6dd",
+      storageBucket: "query-cb6dd.firebasestorage.app",
+      messagingSenderId: "284591950778",
+      appId: "1:284591950778:web:df5201112ed4f57db06b83",
+      measurementId: "G-MZB0BPF273",
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // define authentication variable
+    let auth = firebase.auth();
+    let db = firebase.firestore();
+
+    // define a storage reference
+    let ref = firebase.storage().ref();
+  </script>
   <script src="app.js"></script>
 </html>
